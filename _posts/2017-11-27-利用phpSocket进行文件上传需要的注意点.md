@@ -12,7 +12,7 @@ tags:
 ---
 ## 原理
 PHP利用`socket`进行文件上传，欲知其`原理`，首先需要知悉上传时的`请求信息`，请求信息包含`请求头`和`请求体`。通常情况下，PHP通过表单上传文件时，`CHROME`抓取到的<strong>信息</strong>如图
-![](https://github.com/kinhoom/kinhoom.github.io/blob/master/img/uploadChromeHeader.png)
+![](http://a1.qpic.cn/psb?/V119AGHh0HMOkI/WLoNduhA6ldbf*UJ.IzDrCc19yvzCgrhOGkI934xphE!/b/dPMAAAAAAAAA&bo=PwWXAQAAAAADB44!&rf=viewer_4)
 根据具体的请求信息，便可以进行<strong>请求</strong>`请求头和请求体`的拼装,继而通过`fsock`一系列`socket文件处理`从而达到和表单上传一样的效果。
 ## 核心代码
 ```php
