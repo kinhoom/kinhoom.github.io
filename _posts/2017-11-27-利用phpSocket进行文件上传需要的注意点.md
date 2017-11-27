@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      双击单击易忽视的问题
+title:      利用phpSocket进行文件上传
 subtitle:   
 date:       2017-11-27
 author:     Alex Kinhoom
@@ -12,7 +12,7 @@ tags:
 ---
 ## 原理
 PHP利用`socket`进行文件上传，欲知其`原理`，首先需要知悉上传时的`请求信息`，请求信息包含`请求头`和`请求体`。通常情况下，PHP通过表单上传文件时，`CHROME`抓取到的<strong>信息</strong>如图
-![](../img/uploadChromeHeader.png)
+![](https://github.com/kinhoom/kinhoom.github.io/blob/master/img/uploadChromeHeader.png)
 根据具体的请求信息，便可以进行<strong>请求</strong>`请求头和请求体`的拼装,继而通过`fsock`一系列`socket文件处理`从而达到和表单上传一样的效果。
 ## 核心代码
 ```php
