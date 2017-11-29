@@ -1,10 +1,10 @@
 # Site settings
 title: alex kinhoom
-SEOTitle: alex kinhoom's blog | BY Blog
+SEOTitle: Alex Kinhoom's blog
 header-img: img/post-bg-desk.jpg
 email: 
 description: "Stay hungry stay foolish"
-keyword: "BY, BY Blog, php, PHP, mysql, alex kinhoom"
+keyword: "php, PHP, mysql, alex kinhoom,web,Web Server"
 url: "http://kinhoom.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/kinhoom/kinhoom.github.io" # you code repository
