@@ -11,7 +11,7 @@ tags:
     - 加密解密
 ---
 ## php mcrypt加密解密实例应用
-由于出于安全考虑，参数传递的时候需要进行<strong>加密</strong>和<strong>解密</strong>，一个比较简单的方法是直接使用php中的函数mcrypt_encrypt、mcrypt_decrypt，一个<strong>加密</strong>，一个<strong>解密</strong>，但是问题又出现了，这个加密过程中会产生一些使`url`混乱的符号，于是在加密后对加密字符再进行一次处理，然后多了一一次解析：
+由于出于安全考虑，参数传递的时候需要进行<strong>加密</strong>和<strong>解密</strong>，一个比较简单的方法是直接使用`php`中的函数`mcrypt_encrypt`、`mcrypt_decrypt`，一个<strong>加密</strong>，一个<strong>解密</strong>，但是问题又出现了，这个加密过程中会产生一些使`url`混乱的符号，于是在加密后对加密字符再进行一次处理，然后多了一一次解析：
 ## 实现代码
 ```php
 $key = "miyao";//密钥
