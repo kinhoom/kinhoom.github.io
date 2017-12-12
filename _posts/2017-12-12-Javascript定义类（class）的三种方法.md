@@ -9,9 +9,9 @@ catalog: true
 tags:
     - JAVASCRIPT
 ---
-## Javascript定义类（class）的三种方法
+# Javascript定义类（class）的三种方法
 
-# 构造函数法
+## 构造函数法
 这是经典方法，也是教科书必教的方法。它用构造函数模拟<strong>类</strong>，在其内部用`this`关键字指代实例对象。
 ```javascript
 function Cat() {
@@ -29,7 +29,7 @@ Cat.prototype.makeSound = function(){
 	alert("喵喵喵");
 }
 ```
-# Object.create()
+## Object.create()
 为了解决<strong>构造函数法</strong>的缺点，更方便地生成对象，`Javascript`的国际标准`ECMAScript第五版（目前通行的是第三版）`，提出了一个新的方法`Object.create()`。
 用这个方法，"类"就是一个对象，不是函数。
 ```javascript
@@ -55,8 +55,8 @@ if (!Object.create) {
 }
 ```
 这种方法比<strong>构造函数法</strong>简单，但是不能实现私有属性和私有方法，实例对象之间也不能共享数据，对<strong>类</strong>的模拟不够全面。
-# 极简主义法
-荷兰程序员Gabor de Mooij提出了一种比`Object.create()`更好的新方法，他称这种方法为<strong>极简主义法</strong>（minimalist approach）。这也是我推荐的方法。
+## 极简主义法
+荷兰程序员Gabor de Mooij提出了一种比`Object.create()`更好的新方法，他称这种方法为<strong>极简主义法</strong>（minimalist approach）。这也是我推荐的方法。<br>
 <strong>封装</strong><br>
 这种方法不使用`this`和`prototype`，代码部署起来非常简单，这大概也是它被叫做<strong>极简主义法</strong>的原因。
 首先，它也是用一个对象模拟<strong>类</strong>。在这个类里面，定义一个构造函数`createNew()`，用来生成实例。
@@ -83,7 +83,7 @@ var Cat = {
 var cat1 = Cat.createNew();
 cat1.makeSound(); // 喵喵喵
 ```
-这种方法的好处是，容易理解，结构清晰优雅，符合传统的<strong>面向对象编程</strong>的构造，因此可以方便地部署下面的特性。
+这种方法的好处是，容易理解，结构清晰优雅，符合传统的<strong>面向对象编程</strong>的构造，因此可以方便地部署下面的特性。<br>
 <strong>继承</strong><br>
 让一个类继承另一个类，实现起来很方便。只要在前者的`createNew()`方法中，调用后者的`createNew()`方法即可。
 先定义一个`Animal`类。
